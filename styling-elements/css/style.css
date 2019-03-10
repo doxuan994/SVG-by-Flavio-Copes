@@ -1,0 +1,22 @@
+body {
+    background: #eee;
+}
+
+svg {
+    background-color: white;
+}
+.svg-text {
+    font-size: 3.2em;
+    font-weight: bold;
+    font-family: Georgia, serif;
+
+    fill: green;
+    stroke: red;
+    stroke-width: 2px;
+    fill-opacity: 0.5;
+}
+
+.svg-text2 {
+    fill: green;
+    font-family: "Courier New";
+}
