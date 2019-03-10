@@ -1,0 +1,3 @@
+#my-rect {
+    fill: red
+}

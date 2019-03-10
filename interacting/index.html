@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Add the CSS in a CDATA: -->
+    <svg>
+        <rect id="my-rect" x="0" y="0" width="10" height="10" />
+    </svg>
+
+    <!-- An SVG file can also include an external style sheet: -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width=".." height=".." viewBox="..">
+        <rect id="my-rect" x="0" y="0" width="10" height="10" />
+    </svg>
+
+
+    <!-- JavaScript inside SVG -->
+    <svg>
+        <script>
+            <![CDATA[
+            window.addEventListener("load", () => {
+                //...
+            }, false)
+            ]]>
+        </script>
+        <rect x="0" y="0" width="10" height="10" fill="blue" />
+    </svg>
+
+
+    <svg>
+        <rect x="0" y="0" width="10" height="10" fill="blue" />
+        <script>
+            <![CDATA[
+            //...
+            ]]>
+        </script>
+    </svg>
+
+    <svg>
+        <rect x="0" y="0" width="10" height="10" fill="blue"
+        id="my-rect" class="a-rect" />
+        <script>
+            <![CDATA[
+            console.log(document.getElementsByTagName('rect'))
+            console.log(document.getElementById('my-rect'))
+            console.log(document.querySelector('.a-rect'))
+            console.log(document.querySelectorAll('.a-rect'))
+            ]]>
+        </script>
+    </svg>
+
+    <svg>
+        <rect x="0" y="0" width="10" height="10" fill="blue"
+        id="my-rect" />
+    </svg>
+
+    
+
+</body>
+</html>
